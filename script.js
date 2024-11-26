@@ -32,5 +32,7 @@ fetchData(apiurl).then((data) => {
         2
       )}°C.`
     );
+  } else {
+    console.error("No data received");
   }
 });
