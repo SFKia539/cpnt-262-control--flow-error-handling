@@ -2,7 +2,7 @@
 const apiKey = "b13852367f55131884d9289580dedd31";
 
 // Change to your city of choice
-const city = "Calgary";
+// const city = "Calgary";
 
 // URL with string interpolation to insert city and API key
 const apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
@@ -27,11 +27,11 @@ fetchData(apiurl).then((data) => {
     console.log("Weather Data:", data);
     const weather = data.weather[0].description;
     const temperature = data.main.temp - 273.15;
-    // console.log(
-    //   `The weather in ${city} is ${weather} with a temperature of ${temperature.toFixed(
-    //     2
-    //   )}°C.`
-    // );
+    console.log(
+      `The weather in ${city} is ${weather} with a temperature of ${temperature.toFixed(
+        2
+      )}°C.`
+    );
   } else {
     console.error("No data received");
   }
